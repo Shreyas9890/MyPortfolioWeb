@@ -1,0 +1,143 @@
+/* General Navbar styles */
+.navbar {
+    height: 3rem;
+    width: 100vw;
+    max-width: 75rem;
+    margin: 16px auto;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: transparent;
+    backdrop-filter: blur(7px);
+}
+
+.logo {
+    object-fit: cover;
+    width: 4rem;
+    height: 4rem;
+}
+
+.menuListItem {
+    margin: 0.75rem;
+    cursor: pointer;
+}
+
+.menuListItem:hover {
+    border-bottom: 2px solid #19BFB7;
+    padding-bottom: 0.25rem;
+}
+
+.menuBtn {
+    object-fit: cover;
+    height: 33px;
+    width: 82px;
+    background: linear-gradient(to right, #2c5364, #203A43, #0F2027);
+    color: black;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.contactBtnImg {
+    height: 50px;
+    width: 66px;
+    padding: 0;
+    margin: 2px;
+}
+
+.menu {
+    display: flex;
+    text-decoration: none;
+    padding: 0;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    transition: all 0.4s;
+    position: relative;
+}
+
+.menuListItem::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 41px;
+    border-radius: 10px 10px 0 0;
+    transform-origin: bottom;
+    background: linear-gradient(to right, #2c5364, #203A43, #0F2027);
+    transform: scaleY(0.05);
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.menuListItem:hover::before {
+    transform: scale(1.1);
+}
+
+.menu:hover {
+    color: white;
+}
+
+.active {
+    color: #19BFB7;
+}
+
+/* Mobile Menu Button (Hamburger Icon) */
+.mobileMenuBtn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 10;
+}
+
+.hamburger {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Menu Styles */
+@media screen and (max-width: 705px) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .menuListItem {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+
+    /* Adjust Navbar Width for Mobile */
+    .navbar {
+        height: 3rem;
+        width: 163vw;
+    }
+
+    /* Show the Hamburger Icon on Mobile */
+    .mobileMenuBtn {
+        display: flex;
+    }
+}

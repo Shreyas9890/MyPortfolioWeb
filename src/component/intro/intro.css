@@ -1,0 +1,129 @@
+.img-box {
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    min-block-size: max-content;
+    right: 340px;
+    z-index: -1;
+}
+
+.img-box img {
+    width: auto;
+    height: 78vh;
+    max-width: 75rem;
+    position: absolute;
+    left: 55%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+    filter: drop-shadow(0 0 100px rgba(100, 156, 187, 0.9)) brightness(1);
+}
+
+h2 {
+    padding-bottom: 0.55rem;
+}
+
+#intro {
+    height: 100vh;
+        /* width: 100vw; */
+        max-width: 75rem;
+        margin: 0 auto;
+        /* overflow: hidden; */
+
+}
+
+
+
+.introcontent {
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello {
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.introName {
+    color: #0ae0d6;
+    font-weight: 300;
+}
+
+.introPara {
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.hire-btn {
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.hire-img {
+    height: 11px;
+    width: 13px;
+    filter: invert(1);
+
+}
+
+@media screen and (max-width:705px) {
+
+    .introName {
+        color: #0ae0d6;
+        font-weight: 300;
+
+    }
+
+    #intro{
+        width: 160%;
+            padding: 20px 0;
+            height: fit-content;
+    }
+
+
+    .img-box img {
+        width: 180vw;
+        height: fit-content;
+        max-width: 75rem;
+        position: absolute;
+        filter: brightness(0.3);
+        left: 50%;
+        bottom: -240px;
+
+    }
+
+    .img-box {
+        object-fit: cover;
+        position: absolute;
+        bottom: 110px;
+        min-block-size: max-content;
+        right: 103px;
+        z-index: -1;
+    }
+
+    .introcontent {
+        height: 123vh;
+        width: 144vw;
+        padding: 2rem;
+        font-size: 2rem;
+        font-weight: 200;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width:416p) {}
